@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'ag-grid-community/styles/ag-grid.css'; // Core grid CSS, always needed
 import 'ag-grid-community/styles/ag-theme-alpine.css'; // Optional theme CSS
-import { AlbumList,AlbumCreate } from "../views";
+import { AlbumList,AlbumCreate, AlbumUpdate } from "../views";
 
 const App = () => {
   return (
@@ -14,6 +14,7 @@ const App = () => {
                 <Route path="/"></Route>
                 <Route path="/music/list" element={<AlbumList />}></Route>
                 <Route path="/music/create" element={<AlbumCreate />}></Route>
+                <Route path="/music/update/:id" element={<AlbumUpdate />}></Route>
             </Routes>
           </BrowserRouter>
       </div>

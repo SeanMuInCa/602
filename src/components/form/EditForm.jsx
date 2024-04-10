@@ -24,7 +24,7 @@ const CancelBtn = styled.input.attrs({
     margin-left: 5px
 `;
 
-const EditForm = ({formType, aName="mu", aArtist="mu", aYear, aArt="http:mu"})=>{
+const EditForm = ({formType, aName="", aArtist="", aYear="", aArt="", onSubmit})=>{
     const [albumName, setalbumName] = useState();
     const [artistName, setArtistName] = useState();
     const [albumYear, setAlbumYear] = useState();
@@ -41,7 +41,7 @@ const EditForm = ({formType, aName="mu", aArtist="mu", aYear, aArt="http:mu"})=>
         <label htmlFor="">Artwork: </label>
         <UserInput setValue={setAlbumArt} initialValue={aArt} />
 
-        <Button type="button" value={`${formType} Album`}></Button>
+        <Button type="button" value={`${formType} Album`} onClick={()=>{onSubmit(albumName,artistName,albumYear,albumArt)}}></Button>
         <CancelBtn type="button" value="Cancel" ></CancelBtn>
     </Form>
     )
