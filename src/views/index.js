@@ -1,4 +1,6 @@
 import AlbumList from "../views/AlbumList";
 import AlbumCreate from "./AlbumCreate";
 import AlbumUpdate from "./AlbumUpdate";
-export {AlbumList,AlbumCreate,AlbumUpdate}
+import Register from './Register';
+import Login from './Login';
+export {AlbumList,AlbumCreate,AlbumUpdate,Register,Login}

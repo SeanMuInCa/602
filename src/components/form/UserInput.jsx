@@ -6,9 +6,9 @@ const Input = styled.input.attrs({
 })`
     margin: 5px 0;
 `;
-const UserInput = ({setValue, initialValue})=>{
+const UserInput = ({setValue, initialValue,type='text'})=>{
     return (
-        <Input type="text" placeholder={initialValue} onChange={(e)=>{ setValue(e.target.value)}}></Input>
+        <Input type={type} placeholder={initialValue} onChange={(e)=>{ setValue(e.target.value)}}></Input>
     )
 }
 
